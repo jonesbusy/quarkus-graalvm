@@ -3,7 +3,8 @@ package cloud.delaye;
 import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.Set;
-
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -17,6 +18,9 @@ import javax.ws.rs.core.MediaType;
 @Consumes(MediaType.APPLICATION_JSON)
 public class FruitResource {
 
+    // Logger
+    public static Logger LOG = LoggerFactory.getLogger(FruitResource.class);
+
     private Set<Fruit> fruits = Collections.newSetFromMap(Collections.synchronizedMap(new LinkedHashMap<>()));
 
     public FruitResource() {
@@ -26,6 +30,7 @@ public class FruitResource {
 
     @GET
     public Set<Fruit> list() {
+        LOG.debug("Retrieving list of fruit");
         return fruits;
     }
 
