@@ -12,4 +12,4 @@ public class Fruit {
         this.name = name;
         this.description = description;
     }
-}
+}   
