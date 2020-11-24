@@ -1,14 +1,14 @@
 package cloud.delaye;
 
-public class Fruit {
+public class Beer {
 
     public String name;
     public String description;
 
-    public Fruit() {
+    public Beer() {
     }
 
-    public Fruit(String name, String description) {
+    public Beer(String name, String description) {
         this.name = name;
         this.description = description;
     }

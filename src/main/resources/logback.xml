@@ -19,6 +19,7 @@
     <!-- Log level per appender -->
     <logger name="io.netty" level="INFO" />
     <logger name="io.quarkus" level="INFO" />
+    <logger name="io.smallrye.openapi" level="INFO" />
     <logger name="org.jboss.resteasy" level="INFO" />
 	<logger name="cloud.delaye" level="DEBUG" />
 	
