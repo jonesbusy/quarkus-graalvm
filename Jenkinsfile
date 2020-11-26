@@ -19,6 +19,6 @@ node('master') {
 	
 	stage('Deploy') {
 		sh "${tool(name : 'helm-3.2.4')}/helm version"
-		sh "${tool(name : 'kubectl-1.19.4')}/kubectl version"
+		sh "${tool(name : 'kubectl-1.19.4')}/kubectl version --client=true"
 	}
 }
