@@ -12,6 +12,6 @@ node('master') {
 		])
 	}
 	stage('Build') {
-		
+		sh "${tool(type : 'maven', name : '3.6.3')}/bin/mvn clean package"
 	}
 }
